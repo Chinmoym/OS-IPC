@@ -10,6 +10,7 @@ Multiple users would like to run this this application  through a client.
 Design a client and server model to implement this app using message queues
 
 The following program is only the server end program. It is always on
+It implements a simple calculator
 
 compile: gcc assignment_mq_server.c -o assignment_mq_server
 execute: ./assignment_mq_server
@@ -30,6 +31,7 @@ execute: ./assignment_mq_server
 char rcv_msg[max_msg_size];
 int msg_q_id;
 
+//signal handler
 void handler(int signo){
 	if (signo==SIGINT){
 		//close message Q
